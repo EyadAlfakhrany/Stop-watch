@@ -1,0 +1,51 @@
+
+---
+
+##  How It Works
+
+1. **Initialization**
+   - Ports, LCD, Buttons, and LED are initialized.
+   - A welcome message `hallo` is displayed on the LCD.
+
+2. **Time Setting**
+   - **Button 1**: Increment hours.
+   - **Button 2**: Increment minutes (rolls over to 0 after 59).
+   - **Button 3**: Increment seconds (rolls over after 59 and increments minutes).
+   - **Button 4**: Start countdown.
+
+3. **Countdown Mode**
+   - Time is shown and decremented each second.
+   - LED turns ON during countdown.
+   - Countdown can be stopped by pressing **Button 4** again.
+   - When the timer reaches 00:00:00:
+     - LED turns OFF.
+     - Buzzer sounds repeatedly.
+     - LCD displays: `time ended`.
+
+---
+
+##  Example
+
+- Set time: `01:30:15`
+- Start countdown.
+- At `00:00:00`: LED OFF, Buzzer ON, LCD shows `"time ended"`
+
+---
+
+##  Future Improvements
+
+- Add software debounce to buttons.
+- Use hardware timers instead of `_delay_ms()` for better accuracy.
+- Add reset and resume functions.
+- Add EEPROM save/restore last timer values.
+
+---
+
+##  Author
+
+**Eyad Eldeen Mohamed Alfakhrany**  
+Embedded Software Engineer  
+[GitHub](https://github.com/EyadAlfakhrany) | [LinkedIn](https://linkedin.com/in/eyad-alfakhrany-7b194b22a)
+
+---
+
